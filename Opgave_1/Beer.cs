@@ -16,6 +16,10 @@ namespace Opgave_1
             Abv = abv;
         }
 
+        public Beer()
+        {
+        }
+
         public int Id { get; set; }
 
         /// <summary>
@@ -30,6 +34,7 @@ namespace Opgave_1
                 _name = value;
             }
         }
+
         /// <summary>
         /// Price needs to be more than 0
         /// </summary>
@@ -42,6 +47,7 @@ namespace Opgave_1
                 _price = value;
             }
         }
+
         /// <summary>
         /// ABV(Alcohol by volume) should be more than 0 and less than 100
         /// </summary>
@@ -53,6 +59,11 @@ namespace Opgave_1
                 if (value <= 0 || value >= 100) throw new ArgumentOutOfRangeException();
                 _abv = value;
             }
+        }
+
+        public override string ToString()
+        {
+            return $"Nr. {Id}, Name {Name}, Price {Price}, Abv {Abv} ";
         }
     }
 }
