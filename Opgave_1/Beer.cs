@@ -5,10 +5,10 @@ namespace Opgave_1
     public class Beer
     {
         private string _name;
-        private int _price;
+        private double _price;
         private double _abv;
 
-        public Beer(int id, string name, int price, double abv)
+        public Beer(int id, string name, double price, double abv)
         {
             Id = id;
             Name = name;
@@ -38,8 +38,7 @@ namespace Opgave_1
         /// <summary>
         /// Price needs to be more than 0
         /// </summary>
-        public int Price
-        {
+        public double Price {
             get => _price;
             set
             {
